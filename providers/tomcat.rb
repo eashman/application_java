@@ -25,7 +25,7 @@ action :before_compile do
 
   unless new_resource.restart_command
     new_resource.restart_command do
-      run_context.resource_collection.find(:service => "tomcat6").run_action(:restart)
+      run_context.resource_collection.find(:service => "tomcat").run_action(:restart)
     end
   end
 
